@@ -1,1 +1,1 @@
-# datamola-cv
+https://manofsky.github.io/datamola-cv/
