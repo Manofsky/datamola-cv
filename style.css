@@ -1,5 +1,63 @@
-* {
-  box-sizing: border-box;
+:root {
+  --color-white: #ffffff;
+  --main-bg: #513D2F;
+}
+
+@font-face {
+  font-family: Merriweather;
+   src: url("assets/fonts/Merriweather-Bold.ttf");
+ }
+ @font-face {
+  font-family: Inter;
+   src: url("assets/fonts/Inter-VariableFont_slnt,wght.ttf");
+ }
+
+.body {
   margin: 0;
   padding: 0;
+  font-family: Inter;
+  font-size: 20px;
+}
+
+.body__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.container {
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+.header {
+  background: var(--main-bg);
+}
+
+.header__container{
+  display: flex;
+  justify-content: end;
+  padding-right: 20px;
+}
+
+.list {
+  list-style: none;
+}
+
+.list__link {
+  padding: 0 12px;
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.menu__list {
+  display: flex;
+  padding: 0 20px 0 0;
+}
+
+.footer__container {
+  height: 100px;
 }
