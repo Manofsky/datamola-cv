@@ -1,21 +1,27 @@
 :root {
   --color-white: #ffffff;
+  --color-black: #000000;
   --main-color: #703912;
   --main-color-light: #a65922;
 }
 
 @font-face {
   font-family: Merriweather;
-   src: url("assets/fonts/Merriweather-Bold.ttf");
- }
- @font-face {
-  font-family: Inter;
-   src: url("assets/fonts/Inter-VariableFont_slnt,wght.ttf");
- }
+  src: url("assets/fonts/Merriweather-Bold.ttf");
+}
 
- .title {
+@font-face {
+  font-family: Inter;
+  src: url("assets/fonts/Inter-VariableFont_slnt,wght.ttf");
+}
+
+.title {
   font-family: Merriweather;
- }
+}
+
+.paragraph {
+  font-family: Inter;
+}
 
 .body {
   margin: 0;
@@ -33,9 +39,9 @@
 
 .container {
   box-sizing: border-box;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
-  max-width: 1440px;
   border: 1px solid red;
 }
 
@@ -43,10 +49,9 @@
   background: var(--main-color);
 }
 
-.header__container{
+.header__container {
   display: flex;
   justify-content: end;
-  padding-right: 20px;
 }
 
 .list {
@@ -61,7 +66,9 @@
 
 .menu__list {
   display: flex;
-  padding: 0 20px 0 0;
+  align-items: center;
+  height: 50px;
+  margin: 18px 0;
 }
 
 .main {
@@ -87,20 +94,40 @@
   flex-direction: column;
 }
 
-.title-main {
+.title_main {
   position: relative;
   font-size: 32px;
 }
 
-.title-main::after {
+.title_main::after {
   content: "";
   position: absolute;
-  margin-left: -70px;
-  width: 140px;
-  height: 2px;
   bottom: -19px;
   left: 50%;
+  width: 140px;
+  height: 2px;
+  margin-left: -70px;
   background-color: var(--main-color);
+}
+
+.section-summary__title {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 50px;
+  background-image: linear-gradient(to top, var(--color-white) 39px, var(--color-black) 39px, var(--color-black) 41px, var(--color-white) 41px);
+}
+
+.title_summary {
+  width: min-content;
+  margin: 0 auto;
+  padding: 0 20px 0 20px;
+  line-height: 80px;
+  font-size: 32px;
+  text-align: center;
+  font-family: Merriweather;
+  font-weight: bold;
+  color: var(--main-color);
+  background-color: var(--color-white);
 }
 
 .footer__container {
