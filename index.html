@@ -15,21 +15,21 @@
     <header class="header">
       <div class="container header__container">
         <nav class="menu">
-          <ul class="list menu__list">
-            <li><a href="#Summary" class="list__link">Summary</a></li>
-            <li><a href="#Courses" class="list__link">Courses</a></li>
-            <li><a href="#Skills" class="list__link">Skills</a></li>
-            <li><a href="#English" class="list__link">English</a></li>
-            <li><a href="#Education" class="list__link">Education</a></li>
-            <li><a href="#Projects" class="list__link">Projects</a></li>
-            <li><a href="#Contacts" class="list__link">Contacts</a></li>
+          <ul class="menu__list">
+            <li><a href="#Summary" class="link menu__link">Summary</a></li>
+            <li><a href="#Courses" class="link menu__link">Courses</a></li>
+            <li><a href="#Skills" class="link menu__link">Skills</a></li>
+            <li><a href="#English" class="link menu__link">English</a></li>
+            <li><a href="#Education" class="link menu__link">Education</a></li>
+            <li><a href="#Projects" class="link menu__link">Projects</a></li>
+            <li><a href="#Contacts" class="link menu__link">Contacts</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <main class="main">
-      <div class="container">
-        <section class="section-intro">
+      <div class="container container_main">
+        <section class="container__section section-intro">
           <img class="section-intro__avatar" src="./assets/img/yury.jpg" width="268" height="260"
             alt="Yury Romanovskiy's photo">
           <div class="section-intro__title">
@@ -37,21 +37,50 @@
             <h3>Junior Front-End Developer</h3>
           </div>
         </section>
-        <section class="section-summary">
-          <div class="section-summary__title">
-            <h2 class="title title_summary">Summary</h2>
+        <section class="container__section section-summary">
+          <div class="section-title-wrap">
+            <h2 class="title title_other" id="Summary">Summary</h2>
           </div>
           <p class="paragraph section-summary__content">
-            I am a self-sufficient employee.
-            I know how to find answers to questions on my own.
-            I can solve problems on my own.
+            I am a self-sufficient employee.<br>
+            I know how to find answers for work on my own.<br>
+            I can solve problems on my own.<br>
             Thus, I bring benefits.
           </p>
+        </section>
+        <section class="container__section section-courses">
+          <div class="section-title-wrap">
+            <h2 class="title title_other" id="Courses">Courses</h2>
+          </div>
+          <p class="paragraph section-courses__content">
+            At The Rolling Scopes School I have successfully completed (and have certificates) the main course
+            &laquo;JavaScript/Front-end&raquo; and the Angular framework course.
+          </p>
+        </section>
+        <section class="container__section section-skills">
+          <div class="section-title-wrap">
+            <h2 class="title title_other" id="Skills">Skills</h2>
+          </div>
+          <ul class="section-skills__list">
+            <li>Web-development: <span class="section-skills__elems">HTML5, CSS3, JavaScript, TypeScript</span></li>
+            <li>Frameworks and libraries: <span class="section-skills__elems">Angular</span></li>
+            <li>Version control: <span class="section-skills__elems">GIT, Github</span></li>
+            <li>Graphics: <span class="section-skills__elems">Figma, AutoCAD</span></li>
+          </ul>
+        </section>
+        <section class="container__section section-english">
+          <div class="section-title-wrap">
+            <h2 class="title title_other" id="English">English</h2>
+          </div>
+          <p>A2 (B1 in progress...)</p>
         </section>
       </div>
     </main>
     <footer class="footer">
-      <div class="container footer__container">footer</div>
+      <div class="container footer__container">
+        2023
+        <div><a class="link footer__link" href="https://github.com/Manofsky">Manofsky</a></div>
+      </div>
     </footer>
   </div>
 </body>
