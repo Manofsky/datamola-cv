@@ -60,6 +60,7 @@ html {
 }
 
 .container__section {
+  box-sizing: border-box;
   width: calc(50% - 20px);
   padding: 10px;
 }
@@ -127,9 +128,9 @@ html {
 }
 
 .section-title-wrap {
-  width: 75%;
+  width: 100%;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 0px;
   background-image: linear-gradient(to top, var(--color-white) 39px, var(--color-black) 39px, var(--color-black) 41px, var(--color-white) 41px);
 }
 
@@ -145,8 +146,20 @@ html {
   background-color: var(--color-white);
 }
 
-.section-skills__list {
-  padding: 20px;
+.section-courses__list_padding {
+  padding: 0 20px;
+}
+
+.course__elem {
+  color: var(--main-color-light);
+}
+
+.course__link {
+  color: var(--main-color-light);
+}
+
+.section-skills__list_padding {
+  padding: 0 20px;
 }
 
 .section-skills__elems {
@@ -168,4 +181,10 @@ html {
 .footer__link {
   padding: 0 12px;
   color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+  .container__section {
+    width: 100%;
+  }
 }
