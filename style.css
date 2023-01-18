@@ -146,6 +146,10 @@ html {
   background-color: var(--color-white);
 }
 
+.section-summary__content {
+  text-align: justify;
+}
+
 .section-courses__list_padding {
   padding: 0 20px;
 }
@@ -163,6 +167,55 @@ html {
 }
 
 .section-skills__elems {
+  color: var(--main-color-light);
+}
+
+.section-contacts__list {
+  list-style: none;
+}
+
+.section-contacts__list_padding {
+  padding: 0;
+}
+
+.section-contacts__item {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 30px;
+}
+
+.section-contacts__item:before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 0px;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.section-contacts__item:nth-child(1):before {
+  background-image: url(./assets/svg/location_logo.svg);
+}
+
+.section-contacts__item:nth-child(2):before {
+  background-image: url(./assets/svg/email_logo.svg);
+}
+
+.section-contacts__item:nth-child(3):before {
+  background-image: url(./assets/svg/telegram_logo.svg);
+}
+
+.section-contacts__item:nth-child(4):before {
+  background-image: url(./assets/svg/github_logo.svg);
+}
+
+.section-contacts__item:nth-child(5):before {
+  background-image: url(./assets/svg/discord_logo.svg);
+}
+
+.section-contacts__elems {
   color: var(--main-color-light);
 }
 
