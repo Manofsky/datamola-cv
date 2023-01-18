@@ -28,6 +28,10 @@ html {
   font-family: Merriweather;
 }
 
+.title_none {
+  display: none;
+}
+
 .paragraph {
   font-family: Inter;
 }
@@ -170,6 +174,22 @@ html {
   color: var(--main-color-light);
 }
 
+.section-experience {
+  width: 100%;
+}
+
+.section-experience__content {
+  text-align: justify;
+}
+
+.title_inline {
+  width: max-content;
+}
+
+.section-education__elem {
+  color: var(--main-color-light);
+}
+
 .section-contacts__list {
   list-style: none;
 }
@@ -215,7 +235,7 @@ html {
   background-image: url(./assets/svg/discord_logo.svg);
 }
 
-.section-contacts__elems {
+.section-contacts__elem {
   color: var(--main-color-light);
 }
 
@@ -237,6 +257,14 @@ html {
 }
 
 @media (max-width: 768px) {
+  .title_inline {
+    display: none;
+  }
+
+  .title_none {
+    display: block;
+  }
+
   .container__section {
     width: 100%;
   }
