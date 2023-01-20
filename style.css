@@ -3,7 +3,9 @@
   --color-black: #000000;
   --color-menu: #292929;
   --color-blackout: rgba(41, 41, 41, 0.6);
+  --color-control: rgba(133, 131, 236, 0.6);
   --color-control-border: yellowgreen;
+  --color-control-checked-border: rgba(133, 131, 236);
   --color-active-control: red;
   --main-color: #703912;
   --main-color-light: #a65922;
@@ -206,7 +208,8 @@ html {
 .slider__paragraphs {
   min-height: 4em;
   display: grid;
-  font-size: 20px;
+  font-size: 1em;
+  user-select: text;
   text-align: justify;
 }
 
@@ -220,6 +223,7 @@ html {
 
 .slider__controls {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -247,7 +251,7 @@ html {
   width: 15px;
   height: 15px;
   border-radius: 100%;
-  background-color: rgba(133, 131, 236, 0.6);
+  background-color: var(--color-control);
 }
 
 #radioButton1:checked~.slider__paragraphs #paragraph1,
@@ -257,6 +261,7 @@ html {
 #radioButton5:checked~.slider__paragraphs #paragraph5,
 #radioButton6:checked~.slider__paragraphs #paragraph6 {
   z-index: 1;
+  animation: text .3s ease-in-out;
 }
 
 #radioButton1:checked~.slider__controls #dot1>.slider__dot,
@@ -265,8 +270,8 @@ html {
 #radioButton4:checked~.slider__controls #dot4>.slider__dot,
 #radioButton5:checked~.slider__controls #dot5>.slider__dot,
 #radioButton6:checked~.slider__controls #dot6>.slider__dot {
-  background-color: black;
-  border: solid 2px rgba(133, 131, 236);
+  background-color: var(--color-black);
+  border: solid 2px var(--color-control-checked-border);
   box-sizing: border-box;
 }
 
@@ -277,6 +282,16 @@ html {
 #radioButton5,
 #radioButton6 {
   display: none;
+}
+
+@keyframes text {
+  from {
+    clip-path: inset(0 0 100% 0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
 }
 
 .title_inline {
