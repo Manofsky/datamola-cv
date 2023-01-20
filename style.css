@@ -4,13 +4,14 @@
   --color-black: #000000;
   --color-menu: #292929;
   --color-blackout: rgba(41, 41, 41, 0.6);
-  --color-control: rgba(133, 131, 236, 0.6);
-  --color-control-border: yellowgreen;
-  --color-control-checked-border: rgba(133, 131, 236);
+  --color-control: rgba(166, 89, 34, 0.6);
+  --color-control-hover-border: yellowgreen;
+  --color-control-hover-bg: rgb(112, 57, 18, 0.8);
+  --color-control-checked-border: #000000;
   --color-control-checked-bg: wheat;
-  --color-active-control: red;
-  --main-color: #703912;
-  --main-color-light: #a65922;
+  --color-active-control: rgb(112, 57, 18, 0.3);
+  --main-color: rgb(112, 57, 18);
+  --main-color-light: rgb(166, 89, 34);
   --main-color-wheat: wheat;
 }
 
@@ -238,7 +239,7 @@ html {
   padding: 5px;
   font-size: small;
   border-radius: 45%;
-  border: 2px solid blue;
+  border: 2px solid var(--main-color);
   background-color: var(--color-control);
 }
 
@@ -247,8 +248,8 @@ html {
 }
 
 .slider__clickArea:hover .slider__dot {
-  background-color: var(--main-color);
-  border: solid 2px var(--color-control-border) !important;
+  background-color: var(--color-control-hover-bg);
+  border: solid 2px var(--color-control-hover-border) !important;
   box-sizing: border-box;
 }
 
