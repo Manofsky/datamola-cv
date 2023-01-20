@@ -7,6 +7,7 @@
   --color-control: rgba(133, 131, 236, 0.6);
   --color-control-border: yellowgreen;
   --color-control-checked-border: rgba(133, 131, 236);
+  --color-control-checked-bg: wheat;
   --color-active-control: red;
   --main-color: #703912;
   --main-color-light: #a65922;
@@ -201,11 +202,8 @@ html {
 
 .slider {
   display: grid;
-  grid-row-gap: 1em;
-
   width: 100%;
   margin: 2rem auto 0 auto;
-
   user-select: none;
   background-color: var(--color-white);
 }
@@ -233,7 +231,15 @@ html {
 }
 
 .slider__clickArea {
-  padding: 0 10px 20px 10px;
+  padding: 20px 10px 20px 10px;
+}
+
+.slider__dot {
+  padding: 5px;
+  font-size: small;
+  border-radius: 45%;
+  border: 2px solid blue;
+  background-color: var(--color-control);
 }
 
 .slider__clickArea:hover {
@@ -252,13 +258,6 @@ html {
   box-sizing: border-box;
 }
 
-.slider__dot {
-  width: 15px;
-  height: 15px;
-  border-radius: 100%;
-  background-color: var(--color-control);
-}
-
 #radioButton1:checked~.slider__paragraphs #paragraph1,
 #radioButton2:checked~.slider__paragraphs #paragraph2,
 #radioButton3:checked~.slider__paragraphs #paragraph3,
@@ -275,7 +274,7 @@ html {
 #radioButton4:checked~.slider__controls #dot4>.slider__dot,
 #radioButton5:checked~.slider__controls #dot5>.slider__dot,
 #radioButton6:checked~.slider__controls #dot6>.slider__dot {
-  background-color: var(--color-black);
+  background-color: var(--color-control-checked-bg);
   border: solid 2px var(--color-control-checked-border);
   box-sizing: border-box;
 }
@@ -300,7 +299,7 @@ html {
 }
 
 .title_inline {
-  width: max-content;
+  display: block;
 }
 
 .section-contacts__list {
