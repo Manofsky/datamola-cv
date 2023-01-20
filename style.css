@@ -3,6 +3,8 @@
   --color-black: #000000;
   --color-menu: #292929;
   --color-blackout: rgba(41, 41, 41, 0.6);
+  --color-control-border: yellowgreen;
+  --color-active-control: red;
   --main-color: #703912;
   --main-color-light: #a65922;
   --main-color-wheat: wheat;
@@ -33,6 +35,27 @@ html {
 
 .title_none {
   display: none;
+}
+
+.title_main {
+  position: relative;
+  font-size: 32px;
+}
+
+.title_other {
+  width: min-content;
+  margin: 0 auto;
+  padding: 0 20px 0 20px;
+  line-height: 80px;
+  text-align: center;
+  font-family: Merriweather;
+  font-weight: bold;
+  color: var(--main-color);
+  background-color: var(--color-white);
+}
+
+.title_inline {
+  width: max-content;
 }
 
 .paragraph {
@@ -122,11 +145,6 @@ html {
   flex-direction: column;
 }
 
-.title_main {
-  position: relative;
-  font-size: 32px;
-}
-
 .title_main::after {
   content: "";
   position: absolute;
@@ -143,18 +161,6 @@ html {
   margin: 0 auto;
   padding-top: 0px;
   background-image: linear-gradient(to top, var(--color-white) 39px, var(--color-black) 39px, var(--color-black) 41px, var(--color-white) 41px);
-}
-
-.title_other {
-  width: min-content;
-  margin: 0 auto;
-  padding: 0 20px 0 20px;
-  line-height: 80px;
-  text-align: center;
-  font-family: Merriweather;
-  font-weight: bold;
-  color: var(--main-color);
-  background-color: var(--color-white);
 }
 
 .section-summary__content {
@@ -186,8 +192,91 @@ html {
   width: 100%;
 }
 
-.section-experience__content {
+.slider {
+  display: grid;
+  grid-row-gap: 1em;
+
+  width: 100%;
+  margin: 2rem auto 0 auto;
+
+  user-select: none;
+  background-color: var(--color-white);
+}
+
+.slider__paragraphs {
+  min-height: 4em;
+  display: grid;
+  font-size: 20px;
   text-align: justify;
+}
+
+.slider__paragraph {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  z-index: -1;
+}
+
+.slider__controls {
+  display: flex;
+  justify-content: center;
+}
+
+.slider__clickArea {
+  padding: 0 10px 20px 10px;
+}
+
+.slider__clickArea:hover {
+  cursor: pointer;
+}
+
+.slider__clickArea:hover .slider__dot {
+  background-color: var(--main-color);
+  border: solid 2px var(--color-control-border) !important;
+  box-sizing: border-box;
+}
+
+.slider__clickArea:active .slider__dot {
+  background-color: var(--color-active-control);
+  border: solid 2px var(--color-active-control) !important;
+  box-sizing: border-box;
+}
+
+.slider__dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: rgba(133, 131, 236, 0.6);
+}
+
+#radioButton1:checked~.slider__paragraphs #paragraph1,
+#radioButton2:checked~.slider__paragraphs #paragraph2,
+#radioButton3:checked~.slider__paragraphs #paragraph3,
+#radioButton4:checked~.slider__paragraphs #paragraph4,
+#radioButton5:checked~.slider__paragraphs #paragraph5,
+#radioButton6:checked~.slider__paragraphs #paragraph6 {
+  z-index: 1;
+}
+
+#radioButton1:checked~.slider__controls #dot1>.slider__dot,
+#radioButton2:checked~.slider__controls #dot2>.slider__dot,
+#radioButton3:checked~.slider__controls #dot3>.slider__dot,
+#radioButton4:checked~.slider__controls #dot4>.slider__dot,
+#radioButton5:checked~.slider__controls #dot5>.slider__dot,
+#radioButton6:checked~.slider__controls #dot6>.slider__dot {
+  background-color: black;
+  border: solid 2px rgba(133, 131, 236);
+  box-sizing: border-box;
+}
+
+#radioButton1,
+#radioButton2,
+#radioButton3,
+#radioButton4,
+#radioButton5,
+#radioButton6 {
+  display: none;
 }
 
 .title_inline {
