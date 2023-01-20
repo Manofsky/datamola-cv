@@ -1,5 +1,6 @@
 :root {
   --color-white: #ffffff;
+  --color-white-hover: rgba(255, 215, 0, 0.6);
   --color-black: #000000;
   --color-menu: #292929;
   --color-blackout: rgba(41, 41, 41, 0.6);
@@ -121,6 +122,10 @@ html {
 .menu__link {
   padding: 0 12px;
   color: var(--color-white);
+}
+
+.menu__link:hover {
+  color: var(--color-white-hover);
 }
 
 .main {
